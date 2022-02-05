@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+.uploader-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

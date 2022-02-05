@@ -1,0 +1,35 @@
+p {
+  font-family: Lato;
+  margin: 0;
+}
+:host {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
+}
+.item-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 10px 0;
+  margin-right: 7px;
+  font-size: 12px;
+  .website-icon {
+    color: #27ae60;
+    font-size: 16px;
+  }
+
+  .twitter-icon {
+    color: #1da1f2;
+    font-size: 16px;
+  }
+  .star-icon {
+    color: #f1c40f;
+    font-size: 16px;
+  }
+  p {
+    margin-left: 12px;
+    color: #444444;
+  }
+}

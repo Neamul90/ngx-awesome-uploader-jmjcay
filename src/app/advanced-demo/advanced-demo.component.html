@@ -1,0 +1,21 @@
+<div class="uploader-wrapper">
+  <ngx-awesome-uploader #uploader [adapter]="adapter" [fileMaxCount]="3" [fileMaxSize]="700" [uploadType]="'multi'"
+    (validationError)="onValidationError($event)" [fileExtensions]="['pdf', 'jpg', 'jpeg', 'png', 'mp4', 'css']"
+    [enableCropper]="false" (uploadSuccess)="onUploadSuccess($event)" (removeSuccess)="onRemoveSuccess($event)"
+    (fileAdded)="onFileAdded($event)" [itemTemplate]="myItemTemplate" [customValidator]="myCustomValidator"
+    [captions]="captions" [accept]="'.jpg, .png'">
+    <div class="dropzoneTemplate">
+      <p style="text-align: center"> My Custom Template here
+      <p>
+    </div>
+  </ngx-awesome-uploader>
+
+
+  <ng-template #myItemTemplate let-fileItem="fileItem" let-uploadProgress="uploadProgress">
+    <p>File Size: {{fileItem.file.size}}</p>
+    <p>File Name: {{fileItem.fileName}}</p>
+    <p> Upload Progress: {{uploadProgress}} % </p>
+    <button  (click)="uploader.removeFile(fileItem)">Remove</button>
+  </ng-template>
+
+</div>
